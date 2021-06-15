@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>
+        E1 Industries
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="h-50 fixed top-0 inset-x-0 opacity-70">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a>
+                <ul class="display-col justify-items-center">
+                    <li><a href="#">2049</a></li>
+                    <li><a href="#">2056</a></li>
+                    <li><a href="#">2077</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="https://twitter.com/E1Industries" target="_blank">Twitter</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="products">
+
+                <div class="product">
+                    <div class="product-img-background" style="background-image: url(images/image\ \(1\).png);">
+                        
+                        <div class="img-text-wrapper">
+                            <div class="logo-wrapper">
+                                <img src="images/image (1).png">
+                            </div>
+
+                            <div class="subtitle">
+                                2049 TS Keyboard
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="product-img-background" style="background-image: url(images/image\ \(1\).png);">
+                        <div class="img-text-wrapper">
+                            <div class="logo-wrapper">
+                                <img src="images/image (1).png">
+                            </div>
+
+                            <div class="subtitle">
+                                2066
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="product-img-background" style="background-image: url(images/image\ \(1\).png);">
+                        <div class="img-text-wrapper">
+                            <div class="logo-wrapper">
+                                <img src="images/image (1).png">
+                            </div>
+
+                            <div class="subtitle">
+                                2066+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const productItems = document.querySelectorAll('.product')
+
+    productItems.forEach(productItem =>{
+        productItem.addEventListener('mouseover', () =>{
+            console.log(productItem.childNodes[1].classList);
+            productItem.childNodes[1].classList.add('img-darken');
+        })
+
+        productItem.addEventListener('mouseout', () =>{
+            productItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
+</html>
