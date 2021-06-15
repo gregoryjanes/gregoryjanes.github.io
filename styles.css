@@ -23,7 +23,7 @@ body{
 .body-text{
     
     font-family: Brandon Grotesque;
-    font-size: 20px;
+    font-size: 1.3rem;
     text-transform: none;
     padding-right: 100px;
     padding-left: 100px;
@@ -93,7 +93,7 @@ nav ul li ul li a{
 }
 
 .product-img-background{
-    height: 350px;
+    height: 21rem;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -109,8 +109,8 @@ nav ul li ul li a{
     align-items: center;
     height: 100%;
     text-align: center;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .logo-wrapper img{
@@ -127,10 +127,12 @@ nav ul li ul li a{
 
 .img-text-wrapper:hover .subtitle {
     font-weight: 600;
-    color: White;
+    font-size: 1.5rem;
+    text-align: center;
+    color: black;
 }
 
 .img-darken {
     transition: 1s;
-    filter: brightness(20%);
+    filter: brightness(40%);
 }
