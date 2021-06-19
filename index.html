@@ -64,7 +64,7 @@
             </div>
             
             <div class="bg-gray-100 p-4 mx-2 z-0" x-data="{images: ['images/2049-palegreen-render.png', 'images/2049-lightgrey-render.png',
-                'images/2049-greygreen-iso-render.png', 'images/2049-greygreen-sideangle-render.png', 'images/2049-greygreen-Back-render.png'], 
+                'images/2049-greygreen-iso-render.png', 'images/2049-greygreen-sideangle-render.png', 'images/2049-greygreen-Back-render.png', 'images\2049-greygreen-DownIso-render.png'], 
                 current: 0, last: null, update(val) {this.last = this.current; this.current = val;}}" 
                 x-init="() =&gt; {$watch('current', (val) =&gt; {if(val &lt; -1) update(images.length + val); 
                 else if(val &gt; images.length) update(val - images.length);});}">
