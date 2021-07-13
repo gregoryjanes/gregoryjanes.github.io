@@ -60,11 +60,11 @@
             </div>
             <div class="bg-gray-100 p-4 mx-2">
             
-                <img src="images/2049-lightgrey-render.png">
+                <img src="images/Double_2049_Dark_Anodized.png">
                 <div class="body text-justify"></div>
             </div>
             
-            <div class="bg-gray-100 p-4 mx-2 z-0" x-data="{images: ['images/2049-palegreen-render.png', 'images/2049-lightgrey-render.png',
+            <div class="bg-gray-100 p-4 mx-2 z-0" x-data="{images: ['images/Office_Render/png', 'images/Modern_Render_Serika_Temp.png',
                 'images/2049-greygreen-iso-render.png', 'images/2049-greygreen-sideangle-render.png', 'images/2049-greygreen-Back-render.png', 'images/2049-greygreen-DownIso-render.png', 'images/2049-WithKeycaps.png'], 
                 current: 0, last: null, update(val) {this.last = this.current; this.current = val;}}" 
                 x-init="() =&gt; {$watch('current', (val) =&gt; {if(val &lt; -1) update(images.length + val); 
