@@ -66,6 +66,10 @@ nav ul li a:hover{
     color: black;
 }
 
+nav ul li a.selected{
+    color : black;
+}
+
 nav ul li ul{
     display: none;
     position: absolute;
@@ -96,6 +100,25 @@ nav ul li ul li a{
 }
 
 .product-img-background{
+    height: 21rem;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(110, 123, 128);
+}
+
+/* Projects Styles */
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.project {
+    position: relative;
+}
+
+.project-img-background{
     height: 21rem;
     width: 100%;
     background-size: cover;
@@ -131,11 +154,12 @@ nav ul li ul li a{
 .img-text-wrapper:hover .subtitle {
     font-weight: 600;
     font-size: 1.5rem;
+    text-shadow: 2px 2px 2px black;
     text-align: center;
-    color: black;
+    color: white;
 }
 
 .img-darken {
     transition: 1s;
-    filter: brightness(40%);
+    filter: brightness(60%);
 }

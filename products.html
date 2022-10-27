@@ -16,12 +16,12 @@
     <nav class="h-32 fixed top-0 inset-x-0 shadow-md z-50">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a>
-                <ul class="display-col justify-items-center shadow-md">
+            <li><a class='selected' href="products.html">Products</a>
+                <!-- <ul class="display-col justify-items-center shadow-md">
                     <li><a href="#">2049</a></li>
                     <li><a href="#">2056</a></li>
                     <li><a href="#">2077</a></li>
-                </ul>
+                </ul> -->
             </li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -29,59 +29,41 @@
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
-    </body>
-    <div class="container mt-60">
-        <div class="content-wrapper">
-            <div class="products">
+</body>
+<div class="container mt-60">
+    <div class="content-wrapper">
+        <div class="products">
 
-                <div class="product">
-                    <div class="product-img-background" style="background-image: url(images/image_one.png);">
-                        
-                        <div class="img-text-wrapper w-full">
-                            <div class="subtitle">
-                                2049 TS Keyboard
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img-background" style="background-image: url(images/image_one.png);">
-                        <div class="img-text-wrapper w-full">
-                            <div class="subtitle">
-                                2066
-                            </div>
+            <div class="product" onclick="window.open('https://www.thingiverse.com/thing:5377252', '_newtab');">
+                <div class="product-img-background" style="background-image: url(images/flowerpot-Iso-view.png);">
+                    
+                    <div class="img-text-wrapper w-full">
+                        <div class="subtitle">
+                            2087 Self-Watering Flowerpot
                         </div>
                     </div>
-                </div>
 
-                <div class="product">
-                    <div class="product-img-background" style="background-image: url(images/image_one.png);">
-                        <div class="img-text-wrapper w-full">
-                            <div class="subtitle">
-                                2066+
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
             </div>
+
+
         </div>
     </div>
+</div>
 </body>
 <script>
-    const productItems = document.querySelectorAll('.product')
+const productItems = document.querySelectorAll('.product')
 
-    productItems.forEach(productItem =>{
-        productItem.addEventListener('mouseover', () =>{
-            console.log(productItem.childNodes[1].classList);
-            productItem.childNodes[1].classList.add('img-darken');
-        })
-
-        productItem.addEventListener('mouseout', () =>{
-            productItem.childNodes[1].classList.remove('img-darken');
-        })
+productItems.forEach(productItem =>{
+    productItem.addEventListener('mouseover', () =>{
+        console.log(productItem.childNodes[1].classList);
+        productItem.childNodes[1].classList.add('img-darken');
     })
+
+    productItem.addEventListener('mouseout', () =>{
+        productItem.childNodes[1].classList.remove('img-darken');
+    })
+})
 </script>
+
 </html>

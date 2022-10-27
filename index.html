@@ -15,13 +15,13 @@
 
     <nav class="h-32 fixed top-0 inset-x-0 shadow-md z-50">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a class='selected' href="index.html">Home</a></li>
             <li><a href="products.html">Products</a>
-                <ul class="display-col justify-items-center shadow-md">
+                <!-- <ul class="display-col justify-items-center shadow-md">
                     <li><a href="#">2049</a></li>
                     <li><a href="#">2056</a></li>
                     <li><a href="#">2077</a></li>
-                </ul>
+                </ul> -->
             </li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -29,15 +29,16 @@
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
+    
     <div class="mt-32 flex flex-col max-w-6xl w-full shadow-sm">
         <div class="px-4 mx-2">
             <div class="bg-gray-100 p-4 mx-2 text-center">
                 <div class="titlelarge">
                     E1 Industries
                 </div>
-                <div class="body-text text-justify pt-6">Welcome to E1 Industries! Here at E1 we are obsessed with modernizing products of our past into the designs of the future.
+                <div class="body-text text-justify pt-6">Welcome to E1 Industries! Here at E1 we are obsessed with modernizing products of the past into the designs of the future.
                 Check our some of our work in the products tab and hopefully you will love our designs as much as we do. Connect with
-                us on Twitter, Twitch, Discord, and Youtube to get up to date news on upcomming products and new releases.
+                us on Twitter, Twitch, Discord, and Youtube to hear about upcomming events, products, and new releases.
                 </div>
                 <hr class="bg-gray-300 h-0.5 mx-10">
             </div>
@@ -47,14 +48,13 @@
                 </div>
                 <div class="content flex items-center pt-1">
                     <img class="max-w-sm object-scale-down ml-8" src="images/E1-Greg-08.png">
-                    <div class="body-text text-justify pr-14 pl-4"> The 2049 is our first attempt at producing a classic-modern hybrid typing experience.
+                    <div class="body-text text-justify pr-14 pl-4"> The 2049 is our first attempt at producing a modern-classical typing experience.
                     Greg is an avid mechanical keyboard enthusiast and a passionate engineer, his two worlds combine
-                    in the 2049 creating a engineered mechanical keyboard masterpiece. He wanted to maintain a traditional look on the 2049, with the first 
-                    designs not including the touch screen display. The modern features added to this board were included
-                    with the intention to not disrupt the feel and astesteic of a classic wkl, for the mechanical keyboard veterans 
-                    of the community, while also adding some new and interesting features to help spark a passion amonst new memebers of the hobby.
-                    The 2049 was designed with the intention of bringing a new and exciting custom mechanical keyboard to your desk and we hope
-                    that you see those intention brought to life when you type on it.
+                    in the 2049 creating a mechanical keyboard masterpiece. He wanted to maintain a traditional look on the 2049, referncing a standard WKL similar to the IBM Model M's layout. The modern features added to this board were included
+                    with the intention to not disrupt the feel and astesteic of a classic wkl, for the mechanical keyboard purests 
+                    of the community, while also adding new and interesting features to help spark a passion amongst new memebers of the hobby.
+                    The 2049 was designed with the purpose of bringing a new and exciting custom mechanical keyboard to your desk. We hope
+                    that you experience those intention brought to life when you type on it.
                     </div>
                 </div>
                 <hr class="bg-gray-300 h-0.5 mx-10">
@@ -66,12 +66,12 @@
             </div>
             
             <div class="bg-gray-100 p-4 mx-2 z-0" x-data="{images: ['images/Office_Render.png', 'images/Modern_Render_Serika_Temp.png',
-                'images/2049-greygreen-iso-render.png', 'images/2049-greygreen-sideangle-render.png', 'images/2049-greygreen-Back-render.png', 'images/2049-greygreen-DownIso-render.png', 'images/2049-WithKeycaps.png'], 
+                'images/2049-stackedview-keycaps.png'], 
                 current: 0, last: null, update(val) {this.last = this.current; this.current = val;}}" 
                 x-init="() =&gt; {$watch('current', (val) =&gt; {if(val &lt; -1) update(images.length + val); 
                 else if(val &gt; images.length) update(val - images.length);});}">
 
-                <div class="relative overflow-x-hidden shadow-2xl rounded z-10" style="padding-top: 62.5%">
+                <div class="relative overflow-x-hidden shadow-2xl z-10" style="padding-top: 62.5%">
                     <div class="absolute inset-0 bg-gray-100 flex" :style="`transform: translateX(${(current + 1) * -100}%)`" :class="{ 'transition-transform': !(last &gt;= images.length || last &lt; 0) }" @transitionend="if (current === -1) update(images.length - 1); else if (current === images.length) update(0)">
                         <template x-for="image in [images[images.length -1], ...images, images[0]]" :key="image"><img class="flex-shrink-0 w-full h-full object-center object-cover" :src="image"/></template>
                     </div>
@@ -82,12 +82,12 @@
                         <button class="py-2 px-2 text-4xl opacity-25 bg-gray-100 rounded-l-lg hover:opacity-75 focus:outline-none focus:ring" @click="update(current + 1)">›</button>
                     </div>
                 </div>
-                <div class="text-center text-gray-400" x-text="`Total Images: ${images.length}, Current Image: ${current}`"></div>
+               <!-- <div class="text-center text-gray-400" x-text="`Total Images: ${images.length}, Current Image: ${current}`"></div> -->
             </div>
 
             <div class="bg-gray-100 p-4 mx-2">
                 <p class="body-text text-justify pt-6"> The team at E1 industries is currently finalizing the design and hardware of the 2049 TS. Please let us know your thoughts over on twitter, instagram, or any other platforms you find us on.
-                We are really excited to get this product out to the public, so any support from the community is greatly appreciated. Project updates will be found on our social media pages, so please follow if you want to be up to date
+                We are really excited to get this product out to the public, so any support from the community is greatly appreciated. Project updates can be found on our social media pages and discord, so please follow them if you want to be up to date
                 on the ongoing work at E1.
                 </p> 
                 <pre class="body-text text-justify">
